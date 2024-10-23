@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Transaction</title>
+    <link rel="stylesheet" href="chill.css">
+</head>
+<body>
+    <!-- Navigation bar with Swift logo and text -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-logo">
+                <img src="swift-logo.png" alt="Swift Logo">
+                <span>Swift</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main container for Confirm Transaction form -->
+    <div class="container">
+        <div class="fund-transfer-box">
+            <h2>Confirm Transaction</h2>
+            <form action="#">
+                <div class="input-box">
+                    <label for="enter-code">Enter 4 digit pin code</label>
+                    <input type="text" pattern="[0-9]{4}" min="0000" max="9999" id="enter-code" name="receiver-bank-account" placeholder="Enter exactly 4 digits pin eg: 1234" required>
+                </div>
+
+                
+
+                <button type="submit" class="btn continue">Continue</button>
+                <button type="button" class="btn cancel">Cancel</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

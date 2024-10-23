@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="../script.js"></script>
+    <script>
+        function validate()
+        {   
+            oldPass=document.forgotPhase2.OldPass.value;
+            newPass=document.forgotPhase2.NewPass.value;
+            if(passwordValidate(oldPass) && passwordValidate(newPass) && matchPassword(oldPass,newPass)){
+                return true;
+            }
+            return false;
+        }
+    </script>
 </head>
 <body>
     <!-- Navigation bar with Swift logo and text -->
@@ -24,20 +36,19 @@
             <div class="logo">
                 <img src="swift-logo.png" alt="Swift Logo">
             </div>
-            <h2>Forgot Password?</h2>
-            <p>Recover  your account</p>
-            <form action="#">
+            <h2>Login</h2>
+            <p>Sign in to your account</p>
+            <form action="#" name="forgotPhase2" method="post" onsubmit="return validate()">
                 <div class="input-box">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="UserId" required>
+                    <input type="password" name="OldPass" placeholder="New Password" required>
                 </div>
                 <div class="input-box">
                     <i class="fas fa-lock"></i>
-                    
+                    <input type="password" name="NewPass" placeholder="Confirm    Password" required>
                 </div>
                 <button type="submit" class="btn">Submit</button>
-                <a href="#" class="forgot"></a>
-                <button type="submit" class="btn" onclick="">Go back to login page</button>
+               
                 
             </form>
         </div>
